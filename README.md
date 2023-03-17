@@ -2,7 +2,15 @@
 
 this is a simple project in order to learn how to use [`tap`](https://node-tap.org/docs/tap-files/) with Typescript
 
-## Error
+## Solution
+
+a quick solution was presented https://github.com/tapjs/node-tap/issues/679#issuecomment-1472442741
+
+that made things working correctly with a bit tweaking that can be seen on https://github.com/balexandre/testing-tap/pull/1
+
+just added example so everyone can see that both `c8 tap` and `c8 tap ./test/**/*.spec.ts` pass
+
+## Error (original error for history)
 
 if one runs `npm i` and then `npm test` this is the error that the test throws
 

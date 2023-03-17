@@ -3,10 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "clear && tap --ts ./test/**/*.spec.ts"
+  "tap": {
+    "coverage": false,
+    "node-arg": [
+      "--no-warnings",
+      "--loader",
+      "ts-node/esm"
+    ],
+    "ts": false
   },
-  "type": "module",
+    "scripts": {
+      "test": "c8 tap ./test/**/*.spec.ts",
+      "snap": "c8 tap ./test/**/*.spec.ts",
+      "test:default": "c8 tap",
+      "snap:default": "c8 tap",
+      "test_original": "clear && tap --ts ./test/**/*.spec.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -16,8 +28,9 @@
   },
   "devDependencies": {
     "@types/tap": "15.0.8",
+    "c8": "7.13.0",
     "tap": "16.3.4",
     "ts-node": "10.9.1",
-    "typescript": "4.9.5"
+    "typescript": "5.0.2"
   }
 }
