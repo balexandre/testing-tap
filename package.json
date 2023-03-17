@@ -13,8 +13,10 @@
     "ts": false
   },
     "scripts": {
-      "test": "c8 tap",
-      "snap": "c8 tap",
+      "test": "c8 tap ./test/**/*.spec.ts",
+      "snap": "c8 tap ./test/**/*.spec.ts",
+      "test:default": "c8 tap",
+      "snap:default": "c8 tap",
       "test_original": "clear && tap --ts ./test/**/*.spec.ts"
   },
   "keywords": [],
